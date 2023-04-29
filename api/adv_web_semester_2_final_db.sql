@@ -4,13 +4,13 @@
 -- Title	: Blogging Application
 -- ---------------------------------------------------------------------------------------------------------------------------------
 
+
 -- CREATE DB -----------------------------------------------------------------------------------------------------------------------
 DROP DATABASE IF EXISTS `adv_web`;
-
 CREATE DATABASE IF NOT EXISTS `adv_web`;
-
 USE `adv_web`;
 
+--
 -- CREATE DATABASE TABLES ----------------------------------------------------------------------------------------------------------
 -- Parent tables
 CREATE TABLE IF NOT EXISTS `USERS`(
@@ -30,6 +30,7 @@ CREATE TABLE IF NOT EXISTS `CATEGORIES` (
     CATEGORY VARCHAR(200) NOT NULL UNIQUE
 );
 
+--
 -- Child tables
 CREATE TABLE IF NOT EXISTS `POSTS`(
 	ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -52,5 +53,6 @@ CREATE TABLE IF NOT EXISTS `POST_COMMENTS` (
     CONSTRAINT `FK_COMMENTOR` FOREIGN KEY (COMMENTOR) REFERENCES `USERS` (USERNAME)
 );
 
+--
 -- DEFAULT DATA
 SELECT * FROM `USERS`;
