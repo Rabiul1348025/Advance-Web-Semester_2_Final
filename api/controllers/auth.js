@@ -27,7 +27,7 @@ export const signup = (req, res) => {
             req.body.username,
             hash,
         ]
-
+        // Confirmation message
         connection.query(userDetails, [values], (err, data) => {
             if(err) return res.json(err)
             return res.status(200).json({
