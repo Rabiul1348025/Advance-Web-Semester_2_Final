@@ -16,5 +16,4 @@ export const addPost = (req, res) => {
         return res.status(200).json(data)
     })
 }
-
 // Retrieve posts by author
