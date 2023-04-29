@@ -1,0 +1,560 @@
+$ashGrey: #F6F1F1;
+
+
+
+.app {
+
+    justify-content: center;
+    display: flex;
+
+    .container {
+        width: 1200px;
+
+        .link {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        // Navigation --------------------------------------------------------------
+        .navbar {
+
+            .container {
+                display: flex;
+                justify-content: space-between;
+                padding: 12px 0px;
+                align-items: center;
+
+                .logo {
+                    img {
+                        width: 150px;
+                    }
+                    
+                }
+
+                .links {
+                    gap: 12px;
+                    align-items: center;
+                    display: flex;
+                }
+
+                label {
+                    cursor: pointer;
+                }
+
+                .create {
+                    border-radius: 48%;
+                    height: 48px;
+                    width: 48px;
+                    background-color: #C8B6A6;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    font-weight: 280;
+
+                    &:hover {
+                        background-color: #FFFFFF;
+                        color: #8D7B68;
+                        border: 1px solid #C8B6A6;
+                        height: 46px;
+                        width: 46px;
+                    }
+                }
+            }
+        }
+
+        // Signup and Signin Pages -------------------------------------------------
+        .authenticator {
+            background-color: $ashGrey;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+
+            h1 {
+                color: #146C94;
+                margin: 20px;
+                font-size: 24px;
+            }
+
+            form {
+                width: 380px;
+                background-color: #ECF2FF;
+                padding: 50px;
+                gap: 20px;
+                flex-direction: column;
+                display: flex;
+
+                input {
+                    border: none;
+                    border-bottom: 1px solid #146C94;
+                    padding: 12px;
+                }
+
+                button {
+                    border: none;
+                    background-color: #146C94;
+                    padding: 12px;
+                    cursor: pointer;
+                    color: #FFFFFF;
+                }
+
+                label {
+                    text-align: center;
+                    font-size: 14px;
+                }
+
+                p {
+                    color: #DF2E38;
+                    font-size: 14px;
+                    text-align: center;
+                }
+            }
+        }
+
+        // Home Page ---------------------------------------------------------------
+        .home {
+            .posts{
+                display: flex;
+                margin-top: 48px;
+                flex-direction: column;
+                gap: 100px;
+
+                .post {
+                    gap: 90px;
+                    display: flex;
+
+                    &:nth-child(2n+1){
+                    flex-direction: row-reverse;
+                    }
+
+                    .img {
+                        flex: 2;
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: -18px;
+                            top: 18px;
+                            background-color: $ashGrey;
+                            height: 100%;
+                            width: 100%;
+                            z-index: -1;
+                        }
+                    
+                        img {
+                            max-height: 380px;
+                            width: 90%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .content {
+                        display: flex;
+                        flex: 3;
+                        justify-content: space-between;
+                        flex-direction: column;
+
+                        h1 {
+                            font-size: 45px;
+                            color: #2D2727;
+                        }
+
+                        p {
+                            font-size: 18px;
+                        }
+
+                        button {
+                            cursor: pointer;
+                            width: max-content;
+                            border: none;
+                            padding: 10px 18px;
+                            border: 1px solid #146C94;
+                            background-color: #ECF2FF;
+                            color: #146C94;
+
+                            &:hover {
+                                border: 1px solid $ashGrey;
+                                background-color: #8D7B68;
+                                color: #FFFFFF;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Post page ---------------------------------------------------------------
+        .post-page {
+            display: flex;
+            gap: 48px;
+
+            .content {
+                display: flex;
+                flex: 5;
+                gap: 30px;
+                flex-direction: column;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 300px;
+                }
+
+                .user {
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    font-size: 14px;
+
+                    label {
+                        font-weight: bold;
+                    }
+                
+                    img {
+                        width: 52px;
+                        border-radius: 50%;
+                        height: 52px;
+                        object-fit: cover;
+                    }
+                }
+
+                .edit {
+                    gap: 5px;
+                    display: flex;
+
+                    img {
+                        width: 25px;
+                        cursor: pointer;
+                        height: 25px;
+                    }
+                }
+            }
+            
+            h1 {
+                color: #2D2727;
+                font-size: 40px;
+            }
+
+            p {
+                text-align: justify;
+                line-height: 30px;
+                padding-top: 10px;
+            }
+
+            .menu {
+                display: flex;
+                flex: 2;
+                gap: 25px;
+                flex-direction: column;
+
+                h1 {
+                    color: #2D2727;
+                    font-size: 20px;
+                }
+
+                .post {
+                    display: flex;
+                    gap: 10px;
+                    flex-direction: column;
+
+                    img {
+                        object-fit: cover;
+                        height: 200px;
+                        width: 100%;
+                    }
+
+                    h3 {
+                        color: #555;
+                    }
+
+                    button {
+                        cursor: pointer;
+                        width: max-content;
+                        border: none;
+                        padding: 7.5px 15px;
+                        border: 1px solid #146C94;
+                        background-color: #ECF2FF;
+                        color: #146C94;
+
+                        &:hover {
+                            border: 1px solid $ashGrey;
+                            background-color: #8D7B68;
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        // Create Post Page --------------------------------------------------------
+        .new-post {
+            margin-top: 22px;
+            gap: 20px;
+            display: flex;
+
+            .content {
+                display: flex;
+                flex: 5;
+                gap: 20px;
+                flex-direction: column;
+
+                input {
+                    border: 1px solid #146C94;
+                    padding: 10px;
+                }
+
+                .editor-container {
+                    overflow: scroll;
+                    height: 300px;
+
+                    .editor {
+                        border: none;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .menu {
+                display: flex;
+                flex: 2;
+                gap: 20px;
+                flex-direction: column;
+
+                .item {
+                    padding: 10px;
+                    border:1px solid #146C94;
+                    display: flex;
+                    font-size: 12px;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    color:#2D2727;
+                    flex: 1;
+                    
+                    h1 {
+                        font-size: 20px;
+                    }
+
+                    .file {
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+
+                    .buttons {
+                        justify-content: space-between;
+                        display: flex;
+
+                        :first-child {
+                            border: 1px solid #146C94;
+                            background-color: #FFFFFF;
+                            color: #146C94;
+                            cursor: pointer;
+                            padding: 3px 5px;
+                        }
+
+                        :last-child {
+                            border: 1px solid #FFFFFF;
+                            background-color: #146C94;
+                            color: #FFFFFF;
+                            cursor: pointer;
+                            padding: 3px 5px;
+                        }
+                    }
+
+                    .category {
+                        color: #146C94;
+                        gap: 2px;
+                        align-items: center;
+                        display: flex;
+                    }
+                }
+            }
+        }
+
+        // About us page -----------------------------------------------------------
+        .about-us {
+            display: flex;
+            gap: 48px;
+            flex-direction: column;
+
+            img {
+                object-fit: cover;
+                height: 300px;
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 40px;
+                color: #2D2727;
+                margin-bottom: 10px;
+                padding-top: 20px;
+            }    
+
+            .content {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+
+                .leftist {
+                    display: flex;
+                    flex: 5;
+                    gap: 30px;
+                    flex-direction: column;
+                }
+        
+                .rightist {
+                        display: flex;
+                        flex: 3;
+                        gap: 30px;
+                        flex-direction: column;
+
+                        img {
+                            object-fit: cover;
+                            height: 140px;
+                            width: 100%;
+                        }
+                }
+            }
+        }
+
+        // FAQ page ----------------------------------------------------------------
+        .faqs {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            img {
+                height: 400px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        // Contact us page ---------------------------------------------------------
+        .contact-us {
+            width: 92%;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            padding: 18px 58px 28px 38px;
+            border-radius: 5px;
+            background: #F6F1F1;
+
+            .content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .left-pane {
+                    position: relative;
+                    margin-top: 14px;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 100%;
+                    width: 25%;
+
+                    ::before {
+                        background: #ECF2FF;
+                        transform: translateY(-50%);
+                        content: '';
+                        height: 70%;
+                        position: absolute;
+                        width: 2px;
+                        top: 50%;
+                        right: -15px;
+                    }
+
+                    .details {
+                        text-align: center;
+                        margin: 14px;
+
+                        i {
+                            margin-bottom: 10px;
+                            color: #146C94;
+                            font-size: 30px;
+                        }
+
+                        .title {
+                            font-weight: 500;
+                            font-size: 18px;
+                        }
+
+                        .text-one, .text-two {
+                            color: #2D2727;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .right-pane {
+                    margin-left: 75px;
+                    width: 75%;
+
+                    .title {
+                        color: #2D2727;
+                        font-weight: 600;
+                        font-size: 23px;
+                    }
+
+                    .input-box {
+                        margin: 12px 0;
+                        width: 100%;
+                        height: 45px;
+
+                        input {
+                            width: 100%;
+                            border: none;
+                            border-bottom: 1px solid #146C94;
+                            padding: 12px;
+                        }
+
+                        textarea {
+                            border: none;
+                            padding: 12px;
+                            border-bottom: 1px solid #146C94;
+                            width: 100%;
+                            height: 200px;
+                        }
+                    }
+
+                    .message {
+                        min-height: 220px;
+                    }
+                }
+
+                button {
+                    color:#FFFFFF;
+                    background-color: #146C94;
+                    cursor: pointer;
+                    padding: 12px;
+                    border: none;
+                }
+            }
+        }
+
+        // Page Footer -------------------------------------------------------------
+        footer {
+            margin-top: 120px;
+            display: flex;
+            background-color: #146C94;
+            justify-content: space-between;
+            align-items: center;
+            color: #FFFFFF;
+            padding: 20px;
+            font-size: 14px;
+            bottom: 0;
+
+            img {
+                height: 48px;
+            }
+        }
+    }
+}
