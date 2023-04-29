@@ -11,6 +11,8 @@ const app = express()
 // Allow data parsing
 app.use(express.json())
 app.use(cookieParser())
+
+// routing
 app.use('/api/posts', postRoute)
 app.use('/api/users', userRoute)
 app.use('/api/auth', authRoute)
