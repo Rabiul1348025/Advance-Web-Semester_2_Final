@@ -33,12 +33,13 @@ const Signin = () => {
       navigate("/")
     }
     catch(err){
-      //
+      // 
       setError(err.response.data)
     }
   }
 
   return (
+    // Render signin form to user
     <section className='authenticator'>
       <h1> Sign In </h1>
       <form>
